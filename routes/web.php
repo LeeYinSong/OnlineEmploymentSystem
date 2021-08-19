@@ -56,6 +56,16 @@ Route::post('/addRecruitment/store',[
     'as'=>'addRecruitment.store' 
 ]);
 
+Route::get('/editRecruitment/{id}',[
+    'uses'=>'App\Http\Controllers\RecruitmentController@edit',
+    'as'=>'editRecruitment'
+]);
+
+Route::post('/editRecruitment/update',[ 
+    'uses'=>'App\Http\Controllers\RecruitmentController@update',
+    'as'=>'editRecruitment.update' 
+]);
+
 Route::get('/insertCareer', [
     'uses'=>'App\Http\Controllers\CareerLevelController@create',
     'as'=>'Career_Level']);

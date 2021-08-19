@@ -42,4 +42,28 @@ class RecruitmentController extends Controller
         
         return view('ViewRecruitment')->with('recruitment_notices',$recruitment_notices);
     }
+
+    public function edit($id){
+       
+        $recruitment_notices=recruitment_notice::all()->where('id',$id);
+        
+        return view('editRecruitment')->with('recruitment_notices',$recruitment_notices)
+                                    ->with('CareerLevel',CareerLevel::all());
+    }
+
+    public function update(){
+        $r=request();
+        $recruitment_notices=recruitment_notice::find($r->ID);
+                
+        $recruitment_notices->id=$r->ID;
+        $recruitment_notices->career_levelName=$r->career_levelName;
+        $recruitment_notices->job_description=$r->job_description;
+        $recruitment_notices->requirements=$r->requirements;
+        $recruitment_notices->job_type=$r->job_type;
+        $recruitment_notices->qualification=$r->qualification;
+        $recruitment_notices->salary=$r->salary;
+        $recruitment_notices->job_specialization=$r->job_specialization;
+        $recruitment_notices->save();
+        return redirect()->route('ViewRecruitment');
+    }
 }
