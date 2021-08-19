@@ -42,7 +42,7 @@
                  <div class="row">
                 @foreach($resumes as $resume)
                         <div class="order-md-4 p-4">
-                        <a href="{{ route('ResumeDetail', ['id' => $resumes->id]) }}" style="text-decoration: none; color: Black;">
+                        <a href="{{ route('ResumeDetail', ['id' => $resume->id]) }}" style="text-decoration: none; color: Black;">
                             <div class="card h-150 card bg-snow text-black" Style="outline: 1px black;  width: 330px; height: 410px">
                                 <div class="p-4">
                                     <img src="{{ asset('images/PersonalImg') }}/{{$resume->image}}" alt="" style="width:30%; margin-left: 27%; margin-bottom: 3%;" class="img-fluid"> 
