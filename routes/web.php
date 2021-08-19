@@ -28,13 +28,13 @@ Route::post('/addResume/store',[
 ]);
 
 Route::get('/editResume/{id}',[
-    'uses'=>'App\Http\Controllers\ResumeController@create',
-    'as'=>'Resume'
+    'uses'=>'App\Http\Controllers\ResumeController@edit',
+    'as'=>'editResume'
 ]);
 
 Route::post('/editResume/update',[ 
-    'uses'=>'App\Http\Controllers\ResumeController@store',
-    'as'=>'addResume.store' 
+    'uses'=>'App\Http\Controllers\ResumeController@update',
+    'as'=>'editResume.update' 
 ]);
 
 Route::get('/insertEducation', [
