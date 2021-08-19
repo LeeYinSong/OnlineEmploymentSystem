@@ -8,7 +8,7 @@
 
             @foreach($resumes as $resume)
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0" Style="outline: 5px groove black;"> 
-            <form action="{{ route('ResumeDetail') }}" method="get">
+            <form action="" method="">
 
                        @csrf
                     <h5 class="card-title"><strong> Car Name: </strong>{{$resume->name}}</h5>
