@@ -54,6 +54,37 @@ class ResumeController extends Controller
                                    ->with('EducationLevel',EducationLevel::all());
     }
 
+    public function edit($id){
+       
+        $resumes =resume::all()->where('id',$id);
+        
+        return view('editProduct')->with('resumes',$resumes)
+                                ->with('EducationLevel',EducationLevel::all());
+    }
+
+    public function update(){
+        $r=request();
+        $resumes =resume::find($r->ID);
+        if($r->file('Resume-image')!=''){
+            $image=$r->file('Resume-image');        
+            $image->move('images',$image->getClientOriginalName());                   
+            $imageName=$image->getClientOriginalName(); 
+            $resumes->image=$imageName;
+            }         
+        $resumes->id=$r->ID;
+        $resumes->name=$r->name;
+        $resumes->birthdate=$r->birthdate;
+        $resumes->phone_number=$r->phone_number;
+        $resumes->email=$r->email;
+        $resumes->address=$r->address;
+        $resumes->education_levelName=$r->educationName;
+        $resumes->self_evaluation=$r->self_evaluation;
+        $resumes->image=$imageName;
+        $resumes->work_experiene=$r->work_experiene;
+        $resumes->save();
+        return redirect()->route('ViewResume');
+    }
+
     public function boot()
     {
         Paginator::useBootstrap();
