@@ -18,7 +18,7 @@
         
         </div>
 
-        <a href="{{ url('employer/EmployerLogin') }}" class="button"><button class="btn btn-danger" style="border-radius: 20em;" type="button" onclick="{{ url('user.Studentlogin') }}">Find More Job</button></a>
+        <a href="{{ url('Employer/EmployerLogin') }}" class="button"><button class="btn btn-danger" style="border-radius: 20em;" type="button" onclick="{{ url('user.Studentlogin') }}">Find More Job</button></a>
     </div>
 
     <div class="p-5 container-fluid" style="background: rgba(192,192,192, 0.4);">
