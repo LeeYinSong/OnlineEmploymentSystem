@@ -16,7 +16,7 @@ class RecruitmentController extends Controller
 {
 
     public function create(){
-        return view('insertRecruitment') ->with('CareerLevels',CareerLevel::all());
+        return view('employer.insertRecruitment') ->with('CareerLevels',CareerLevel::all());
     }
 
     public function store(){    //step 2 
