@@ -62,9 +62,6 @@
                             <a class="nav-link" href="{{ url('employer/EmployerHome') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ViewRecruitment') }}">Job list</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="">Resume list</a>
                         </li>
                         

@@ -17,7 +17,7 @@ class ResumeController extends Controller
     }
     //Category::all() means "select * from category"
     public function store(){    
-        $r=request(); 
+        $r=request();
         $image=$r->file('Resume-image');   //step to upload image get the file input
         $image->move('images/PersonalImg',$image->getClientOriginalName());   //images is the location                
         $imageName=$image->getClientOriginalName(); 
@@ -36,7 +36,7 @@ class ResumeController extends Controller
         ]);
 
         Session::flash('success',"Resume create succesful!");        
-        Return redirect()->route('ViewResume');
+        Return redirect()->route('user.home');
     }
 
 
@@ -82,7 +82,7 @@ class ResumeController extends Controller
         $resumes->image=$imageName;
         $resumes->work_experiene=$r->work_experiene;
         $resumes->save();
-        return redirect()->route('ViewResume');
+        return redirect()->route('user.home');
     }
 
     public function boot()

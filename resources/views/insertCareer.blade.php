@@ -23,15 +23,6 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="ID" class="label">Career ID:</label>
-
-                        <div class="col-md-8">
-                            <input type="text" name="ID" id="ID" class="form-control" placeholder="Please Enter Career ID......">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="Career" class="label">Career Name: </label>
 
                         <div class="col-md-8">

@@ -55,4 +55,9 @@ class EmployerController extends Controller
             return redirect()->route('employer.login')->with('fail','Incorrect credentials');
         }
     }
+
+    function logout(){
+        Auth::guard('employer')->logout();
+        return redirect('/');
+    }
 }

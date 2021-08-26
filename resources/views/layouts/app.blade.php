@@ -66,10 +66,10 @@
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('student.ViewRecruitment') }}">Job list</a>
+                            <a class="nav-link" href="">Job list</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('student.ViewResume') }}">Resume list</a>
+                            <a class="nav-link" href="">Resume list</a>
                         </li>
                         
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('employer.navBar.HomeNav')
 @section('content')
 
 
