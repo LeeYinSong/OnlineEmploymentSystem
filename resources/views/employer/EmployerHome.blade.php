@@ -1,4 +1,4 @@
-@extends('student.navBar.HomeNav')
+@extends('employer.navBar.HomeNav')
 @section('content')
     <div class="container-fluid">
         <div class="row">
