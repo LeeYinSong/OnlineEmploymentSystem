@@ -63,7 +63,7 @@
             </div>
             
             <div class="carousel-item" style="position: relative;" data-interval="4000">
-                <img src="images/banner3.jpg" class="d-block w-100" alt="..." style ="height:20%; width: 100%; postition: relative;">
+                <img src="images/banner3.png" class="d-block w-100" alt="..." style ="height:20%; width: 100%; postition: relative;">
                 <a href="{{ url('Employer/EmployerLogin') }}" class="button"><button class="btn btn-danger" style="border-radius: 20em; margin-left: 35%; margin-top: -35%; postition: absolute;" type="button">Become Employer</button></a>
             </div>
         </div>

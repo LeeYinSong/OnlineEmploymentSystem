@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('student.navBar.RegisterNav')
 @section('content')
 <body>
 <!-- style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); background-size: cover;"  -->

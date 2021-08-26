@@ -1,4 +1,4 @@
-@extends('employer.navBar.HomeNav')
+@extends('employer.navBar.RegisterNav')
 @section('content')
 
 

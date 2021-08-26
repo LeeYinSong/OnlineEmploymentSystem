@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('employer.navBar.RegisterNav')
 <style>
 	label{
 		margin: auto;

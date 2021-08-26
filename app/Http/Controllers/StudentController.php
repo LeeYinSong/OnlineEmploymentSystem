@@ -9,7 +9,7 @@ use App\Models\User;
 
 class StudentController extends Controller
 {
-    function create(Request $request){
+    public function create(Request $request){
         //Validate Inputs
         $request->validate([
             'name'=>'required',
@@ -34,7 +34,7 @@ class StudentController extends Controller
             return redirect()->back()->with('fail','Something went wrong, failed to register');
         }
     }
-    function check(Request $request){
+    public function check(Request $request){
         //Validate inputs
         $request->validate([
            'email'=>'required|email|exists:users,email',
@@ -51,7 +51,7 @@ class StudentController extends Controller
         }
     }
 
-    function logout(){
+    public function logout(){
         Auth::guard('web')->logout();
         return redirect('/');
     }

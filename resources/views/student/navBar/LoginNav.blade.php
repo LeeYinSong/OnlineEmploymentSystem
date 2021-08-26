@@ -66,10 +66,7 @@
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('student.ViewRecruitment') }}">Job list</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ViewResume') }}">Resume list</a>
+                            <a class="nav-link" href="{{ route('user.ViewRecruitment') }}">Job list</a>
                         </li>
                         
                             <li class="nav-item dropdown">
@@ -78,6 +75,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('Resume') }}">
+                                        Insert Resume
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

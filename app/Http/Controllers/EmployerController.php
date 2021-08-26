@@ -9,7 +9,7 @@ use App\Models\employer;
 
 class EmployerController extends Controller
 {
-    function create(Request $request){
+    public function create(Request $request){
         //Validate Inputs
         $request->validate([
             'name'=>'required',
@@ -39,7 +39,7 @@ class EmployerController extends Controller
         }
     }
 
-    function check(Request $request){
+    public function check(Request $request){
         //Validate inputs
         $request->validate([
            'email'=>'required|email|exists:employers,email',
@@ -56,7 +56,7 @@ class EmployerController extends Controller
         }
     }
 
-    function logout(){
+    public function logout(){
         Auth::guard('employer')->logout();
         return redirect('/');
     }

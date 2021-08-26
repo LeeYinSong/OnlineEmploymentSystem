@@ -33,7 +33,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('Employer/EmployerHome') }}">
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=145px>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -63,22 +63,21 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('employer/EmployerHome') }}">Home</a>
+                            <a class="nav-link" href="{{ url('Employer/EmployerHome') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Employer.ViewRecruitment') }}">Job list</a>
+                            <a class="nav-link" href="{{ route('employer.ViewResume') }}">Resume list</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Employer.ViewResume') }}">Resume list</a>
-                        </li>
-                        
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::employer()->name }}
+                                    {{ Auth::guard('employer')->user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('Recruitment') }}">
+                                        Insert Recruitment
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

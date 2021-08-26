@@ -103,7 +103,7 @@ Route::prefix('user')->name('user.')->group(function(){
 
         Route::middleware(['auth:web', 'PreventBackHistory'])->group(function(){
         Route::view('/home','student.home')->name('home');
-        Route::view('/ViewRecruitment','ViewRecruitment')->name('ViewRecruitment');
+        Route::view('/ViewRecruitment','student.ViewRecruitment')->name('ViewRecruitment');
         Route::post('/logout',[App\Http\Controllers\StudentController::class,'logout'])->name('logout');
         
     });
@@ -121,7 +121,7 @@ Route::prefix('Employer')->name('Employer.')->group(function(){
 
         Route::middleware(['auth:employer', 'PreventBackHistory'])->group(function(){
         Route::view('/EmployerHome','employer.EmployerHome')->name('EmployerHome');
-        Route::view('/ViewRecruitment','ViewRecruitment')->name('ViewRecruitment');
+        Route::view('/ViewResume','employer.ViewResume')->name('ViewResume');
         Route::post('/logout',[App\Http\Controllers\EmployerController::class,'logout'])->name('logout');
     });
 

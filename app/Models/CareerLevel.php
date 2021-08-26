@@ -10,7 +10,7 @@ class CareerLevel extends Model
     use HasFactory;
     protected $fillable=['id','Career_Level'];
     				
-    public function Resume(){
+    public function RecruitmentNotice(){
 
         return $this->hasMany('App\recruitment_notice');
     }
