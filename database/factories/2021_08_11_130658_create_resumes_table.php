@@ -17,7 +17,7 @@ class CreateResumesTable extends Migration
             $table->id();
             $table->string('name');
             $table->date('birthdate');
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->string('email');
             $table->string('education_levelName');
             $table->string('address');
