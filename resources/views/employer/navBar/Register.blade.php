@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+    <style>
+        body{
+            background: #eee;
+            padding-bottom: 75px;
+        }
+    </style>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +26,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-
 
 <!----------------------------------------------------------------- Navigation(Start) ---------------------------------------------------------------------------------->            
 
@@ -48,29 +52,30 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('user.login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('Employer.login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('user.register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('Employer.register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Home</a>
+                            <a class="nav-link" href="{{ url('employer/EmployerHome') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.ViewRecruitment') }}">Job list</a>
+                            <a class="nav-link" href="{{ route('Employer.ViewRecruitment') }}">Job list</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ViewResume') }}">Resume list</a>
+                            <a class="nav-link" href="{{ route('Employer.ViewResume') }}">Resume list</a>
                         </li>
                         
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::guard('web')->user()->name }}
+                                    {{ Auth::employer()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -90,24 +95,18 @@
                 </div>
             </div>
         </nav>
-<!----------------------------------------------------------------- Navigation(End) ---------------------------------------------------------------------------------->            
-
-<!------------------------------------------------------------------- Banner(Start) ---------------------------------------------------------------------------------->            
-
-        <div class="p-0">
-                <img src="{{ asset('images/banner1.3.png')}}" alt="" class="img-fluid" width=100% Height="20%">
-            </div>
 
         <main class="py-4">
             @yield('content')
         </main>
-<!------------------------------------------------------------------- Banner(End) ---------------------------------------------------------------------------------->            
 
-<!------------------------------------------------------------------- Footer(Start) ---------------------------------------------------------------------------------->
+<!----------------------------------------------------------------- Navigation(End) ---------------------------------------------------------------------------------->            
 
-        <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-white shadow-sm" Style="height: 7%; position: relative">
-            <div class="container-fluid">
+<!------------------------------------------------------------------- Footer(Start) ---------------------------------------------------------------------------------->            
 
+        <div class="container-fluid">
+        <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-white shadow-sm" Style="position: fixed; left: 0; bottom: 0; width: 100%;">
+            
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=100px>      
                     <p class="m-1 copyright-text">&copy;Southern University College. 2021 </p>
 
@@ -116,8 +115,10 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarCollapse" overflow= "hidden">
-                        <ul class="navbar-nav mr-auto"></ul>
-                    
+                        <ul class="navbar-nav mr-auto">
+
+                        </ul>
+
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link twitter" href="#">
@@ -139,8 +140,8 @@
                 </div>
             </nav>
         </div>
-<!------------------------------------------------------------------- Footer(End) ---------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------- Footer(End) ---------------------------------------------------------------------------------->            
 
 </body>
-
 </html>

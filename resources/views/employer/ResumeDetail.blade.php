@@ -11,18 +11,17 @@
             <form action="" method="">
 
                        @csrf
+                    <img src="{{ asset('images/PersonalImg') }}/{{$resume->image}}" alt="" style="width:30%; margin-bottom: 3%;" class="img-fluid"> 
                     <h5 class="card-title"><strong> Car Name: </strong>{{$resume->name}}</h5>
                     <h5 class="card-title"><strong> Brand: </strong>{{$resume->birthdate}}</h5>
                     <h5 class="card-title"><strong> phone_number: </strong>{{$resume->phone_number}}</h5>
                     <h5 class="card-title"><strong> email: </strong>{{$resume->phone_number}}</h5>
                     <h5 class="card-title"><strong> address: </strong>{{$resume->address}}</h5>
                     <h5 class="card-title"><strong> self_evaluation: </strong>{{$resume->self_evaluation}}</h5>
-
-                    <h5 for="ID" class="label"><strong> Description: </strong></h5>   
-                    <h5 class="card-title">{{$resume->work_experiene}}</h5>
+                    <h5 class="card-title"><strong> Description: </strong>{{$resume->work_experiene}}</h5>
 
                     <p style="text-align:center">
-                            <input type="submit" name="insert" value="Add To MyCar" class="btn btn-success">
+                            <input type="submit" name="insert" value="Accept Resume" class="btn btn-success">
                     </p>
                 </form>
                 </div>

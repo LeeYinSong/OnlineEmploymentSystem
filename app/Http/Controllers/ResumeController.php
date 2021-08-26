@@ -13,7 +13,7 @@ Use Session;
 class ResumeController extends Controller
 {
     public function create(){
-        return view('insertResume') ->with('EducationLevels',EducationLevel::all());
+        return view('student.insertResume') ->with('EducationLevels',EducationLevel::all());
     }
     //Category::all() means "select * from category"
     public function store(){    
@@ -35,7 +35,7 @@ class ResumeController extends Controller
             'work_experiene'=>$r->work_experiene,                   
         ]);
 
-        Session::flash('success',"Product create succesful!");        
+        Session::flash('success',"Resume create succesful!");        
         Return redirect()->route('ViewResume');
     }
 
@@ -58,7 +58,7 @@ class ResumeController extends Controller
        
         $resumes =resume::all()->where('id',$id);
         
-        return view('editProduct')->with('resumes',$resumes)
+        return view('editResume')->with('resumes',$resumes)
                                 ->with('EducationLevel',EducationLevel::all());
     }
 

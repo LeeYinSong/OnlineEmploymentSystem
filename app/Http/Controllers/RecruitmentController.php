@@ -7,6 +7,7 @@ use Illuminate\Pagination\Paginator;
 use DB;
 use App\Models\recruitment_notice; 
 use App\Models\CareerLevel; 
+use App\Models\User; 
 Use Session;
 
 
@@ -32,7 +33,7 @@ class RecruitmentController extends Controller
             'job_specialization'=>$r->job_specialization,
         ]);
     
-        Session::flash('success',"recruitment_notice create succesful!");        
+        Session::flash('success',"Recruitment Notice create succesful!");        
         Return redirect()->route('ViewRecruitment');
        
     }
@@ -41,6 +42,14 @@ class RecruitmentController extends Controller
         $recruitment_notices=recruitment_notice::paginate(9);
         
         return view('ViewRecruitment')->with('recruitment_notices',$recruitment_notices);
+    }
+
+    public function RecruitmentDetail($id){
+       
+        $recruitment_notices =recruitment_notice::all()->where('id',$id);
+        
+        return view('RecruitmentDetail')->with('recruitment_notices',$recruitment_notices)
+                                   ->with('CareerLevel',CareerLevel::all());
     }
 
     public function edit($id){

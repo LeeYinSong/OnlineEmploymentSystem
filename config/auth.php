@@ -17,6 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'employer' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\employer::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +49,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
+        ],
+
+        'employer' => [
+            'driver' => 'session',
+            'provider' => 'employers',
         ],
     ],
 
@@ -75,6 +84,10 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'employers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\employer::class,
+        ],
     ],
 
     /*
@@ -98,6 +111,10 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+        'employers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\employer::class,
         ],
     ],
 
