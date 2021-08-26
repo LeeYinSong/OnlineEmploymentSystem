@@ -13,7 +13,7 @@ class EmployerController extends Controller
         //Validate Inputs
         $request->validate([
             'name'=>'required',
-            'email'=>'required|email|unique:users,email',
+            'email'=>'required|email|unique:employers,email',
             'ic' => 'required|min:12|max:12',
             'phone_number' => 'required|min:10|max:12',
             'company'=>'required|string|max:255',
