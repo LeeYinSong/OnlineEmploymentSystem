@@ -78,7 +78,6 @@ class ResumeController extends Controller
         $resumes->address=$r->address;
         $resumes->education_levelName=$r->educationName;
         $resumes->self_evaluation=$r->self_evaluation;
-        $resumes->image=$imageName;
         $resumes->work_experiene=$r->work_experiene;
         $resumes->save();
         return redirect()->route('user.home');

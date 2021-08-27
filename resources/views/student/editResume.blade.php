@@ -31,6 +31,7 @@
                     <form class="subform" method="post" action="{{ route('editResume.update') }}" enctype="multipart/form-data">
 					{{ csrf_field() }} 
 					@foreach($resumes as $resume)
+						<input class="form-control" type="hidden" name="ID" id="ID" value="{{$resume->id}}">
                         <div class="form-group row">
                             	<label for="name" class="label">Name: </label>
                             <div class="col-md-6">

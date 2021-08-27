@@ -64,7 +64,6 @@ class RecruitmentController extends Controller
         $r=request();
         $recruitment_notices=recruitment_notice::find($r->ID);
                 
-        $recruitment_notices->id=$r->ID;
         $recruitment_notices->career_levelName=$r->career_levelName;
         $recruitment_notices->job_description=$r->job_description;
         $recruitment_notices->requirements=$r->requirements;
