@@ -12,8 +12,8 @@
 
                        @csrf
                     <img src="{{ asset('images/PersonalImg') }}/{{$resume->image}}" alt="" style="width:30%; margin-bottom: 3%;" class="img-fluid"> 
-                    <h5 class="card-title"><strong> Car Name: </strong>{{$resume->name}}</h5>
-                    <h5 class="card-title"><strong> Brand: </strong>{{$resume->birthdate}}</h5>
+                    <h5 class="card-title"><strong> Name: </strong>{{$resume->name}}</h5>
+                    <h5 class="card-title"><strong> Birthdate: </strong>{{$resume->birthdate}}</h5>
                     <h5 class="card-title"><strong> phone_number: </strong>{{$resume->phone_number}}</h5>
                     <h5 class="card-title"><strong> email: </strong>{{$resume->phone_number}}</h5>
                     <h5 class="card-title"><strong> address: </strong>{{$resume->address}}</h5>

@@ -50,9 +50,9 @@ class EmployerController extends Controller
 
         $creds = $request->only('email','password');
         if( Auth::guard('employer')->attempt($creds) ){
-            return redirect()->route('employer.Home');
+            return redirect()->route('Employer.EmployerHome');
         }else{
-            return redirect()->route('employer.login')->with('fail','Incorrect credentials');
+            return redirect()->route('Employer.login')->with('fail','Incorrect credentials');
         }
     }
 

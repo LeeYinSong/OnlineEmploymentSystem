@@ -25,7 +25,7 @@
         <div class="col-md-6">
             <div class="card">
 
-                <div class="card-header" style ="text-align:center; font-family:verdana; font-size: 18px"><img src="{{ asset('images/StudentLogo.png')}}" alt="" class="img-fluid" width=10%;>Insert Resume</div>
+                <div class="card-header" style ="text-align:center; font-family:verdana; font-size: 18px"><img src="{{ asset('images/StudentLogo.png')}}" alt="" class="img-fluid" width=10%;>Edit Recruitment</div>
 
                 <div class="card-body">
                     <form class="subform" method="post" action="{{ route('editRecruitment.update') }}" enctype="multipart/form-data">

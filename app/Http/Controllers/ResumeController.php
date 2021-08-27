@@ -50,16 +50,16 @@ class ResumeController extends Controller
        
         $resumes =resume::all()->where('id',$id);
         
-        return view('ResumeDetail')->with('resumes',$resumes)
-                                   ->with('EducationLevel',EducationLevel::all());
+        return view('Employer/ResumeDetail')->with('resumes',$resumes)
+                                   ->with('EducationLevels',EducationLevel::all());
     }
 
     public function edit($id){
        
         $resumes =resume::all()->where('id',$id);
         
-        return view('editResume')->with('resumes',$resumes)
-                                ->with('EducationLevel',EducationLevel::all());
+        return view('student/editResume')->with('resumes',$resumes)
+                                ->with('EducationLevels',EducationLevel::all());
     }
 
     public function update(){
@@ -70,8 +70,7 @@ class ResumeController extends Controller
             $image->move('images',$image->getClientOriginalName());                   
             $imageName=$image->getClientOriginalName(); 
             $resumes->image=$imageName;
-            }         
-        $resumes->id=$r->ID;
+            }
         $resumes->name=$r->name;
         $resumes->birthdate=$r->birthdate;
         $resumes->phone_number=$r->phone_number;

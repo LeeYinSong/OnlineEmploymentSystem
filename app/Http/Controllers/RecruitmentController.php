@@ -48,16 +48,16 @@ class RecruitmentController extends Controller
        
         $recruitment_notices =recruitment_notice::all()->where('id',$id);
         
-        return view('RecruitmentDetail')->with('recruitment_notices',$recruitment_notices)
-                                   ->with('CareerLevel',CareerLevel::all());
+        return view('student/RecruitmentDetail')->with('recruitment_notices',$recruitment_notices)
+                                   ->with('CareerLevels',CareerLevel::all());
     }
 
     public function edit($id){
        
         $recruitment_notices=recruitment_notice::all()->where('id',$id);
         
-        return view('editRecruitment')->with('recruitment_notices',$recruitment_notices)
-                                    ->with('CareerLevel',CareerLevel::all());
+        return view('Employer/editRecruitment')->with('recruitment_notices',$recruitment_notices)
+                                    ->with('CareerLevels',CareerLevel::all());
     }
 
     public function update(){

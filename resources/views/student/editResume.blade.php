@@ -25,7 +25,7 @@
         <div class="col-md-6">
             <div class="card">
 
-                <div class="card-header" style ="text-align:center; font-family:verdana; font-size: 18px"><img src="{{ asset('images/StudentLogo.png')}}" alt="" class="img-fluid" width=10%;>Insert Resume</div>
+                <div class="card-header" style ="text-align:center; font-family:verdana; font-size: 18px"><img src="{{ asset('images/StudentLogo.png')}}" alt="" class="img-fluid" width=10%;>Edit Resume</div>
 
                 <div class="card-body">
                     <form class="subform" method="post" action="{{ route('editResume.update') }}" enctype="multipart/form-data">
@@ -72,7 +72,9 @@
 							<select style="width:200px;text-align:center" name="educationName" id= "educationName" class="form-control">
 								<option  value="">Select Education: </option>
 							@foreach($EducationLevels as $EducationLevel)
-								<option  value="{{ $EducationLevel->education_level}}">{{ $EducationLevel->education_level}}</option>
+								<option  value="{{ $EducationLevel->education_level}}"
+									@if($resume->education_levelName==$EducationLevel->education_level)selected                    
+                        			@endif>{{ $EducationLevel->education_level}}</option>
 							@endforeach
 							</select> 
                         </div>
@@ -95,7 +97,7 @@
 						<div class="form-group row">
 							<label for="work_experiene" class="label">Work Experiene: </label>
                         <div class="col-md-6">
-						<textarea class="form-control" name="work_experiene" id="work_experiene" value="{{$resume->work_experiene}}"></textarea>
+						<textarea class="form-control" name="work_experiene" id="work_experiene">{{$resume->work_experiene}}</textarea>
                         </div>
                     </div>
                     @endforeach

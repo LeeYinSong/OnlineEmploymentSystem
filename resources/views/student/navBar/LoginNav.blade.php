@@ -66,7 +66,7 @@
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.ViewRecruitment') }}">Job list</a>
+                            <a class="nav-link" href="{{ route('ViewRecruitment') }}">Job list</a>
                         </li>
                         
                             <li class="nav-item dropdown">
