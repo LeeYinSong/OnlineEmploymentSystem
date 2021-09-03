@@ -14,7 +14,7 @@
 <div class="container-fluid">
         <div class="row">
             <div class="px-2">
-                <img src="{{ asset('images/icon.png')}}" alt="" class="img-fluid" style="border-radius: 50%; float: left; width:50%;">
+                <img src="{{ asset('images/person.jpg')}}" alt="" class="img-fluid" style="border-radius: 50%; float: left; width:50%;">
 
                 <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:
                 @guest

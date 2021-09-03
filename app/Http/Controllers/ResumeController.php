@@ -8,6 +8,7 @@ use DB;
 use App\Models\resume; 
 use App\Models\EducationLevel; 
 Use Session;
+use Illuminate\Support\Facades\Auth;
 
 
 class ResumeController extends Controller
@@ -17,7 +18,6 @@ class ResumeController extends Controller
     }
     //Category::all() means "select * from category"
     public function store(){    
-        $user_id = Auth::user()->id;
         $r=request();
         $image=$r->file('Resume-image');   //step to upload image get the file input
         $image->move('images/PersonalImg',$image->getClientOriginalName());   //images is the location                
@@ -25,7 +25,6 @@ class ResumeController extends Controller
 
         $addEducation=resume::create([    
             'id'=>$r->ID, 
-            'user_id'=>$user_id,
             'name'=>$r->name,
             'birthdate'=>$r->birthdate, 
             'phone_number'=>$r->phone_number,

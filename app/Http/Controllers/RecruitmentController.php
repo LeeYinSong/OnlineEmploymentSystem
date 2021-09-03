@@ -9,6 +9,7 @@ use App\Models\recruitment_notice;
 use App\Models\CareerLevel; 
 use App\Models\User; 
 Use Session;
+use Illuminate\Support\Facades\Auth;
 
 
 
