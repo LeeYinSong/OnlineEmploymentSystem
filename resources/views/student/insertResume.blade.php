@@ -1,4 +1,4 @@
-@extends('student.navBar.RegisterNav')
+@extends('student.navBar.StudentNav')
 <style>
 	label{
 		margin: auto;
@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <form class="subform" method="post" action="{{ route('addResume.store') }}" enctype="multipart/form-data">
 					{{ csrf_field() }} 
-					
+
                         <div class="form-group row">
                             	<label for="name" class="label">Name: </label>
                             <div class="col-md-6">

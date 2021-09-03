@@ -1,4 +1,4 @@
-@extends('student.navBar.RegisterNav')
+@extends('student.navBar.StudentNav')
 <style>
 	label{
 		margin: auto;
