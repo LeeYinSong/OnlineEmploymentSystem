@@ -35,7 +35,7 @@ class RecruitmentController extends Controller
         ]);
     
         Session::flash('success',"Recruitment Notice create succesful!");        
-        Return redirect()->route('employer.Home');
+        Return redirect()->route('Employer.EmployerHome');
        
     }
 
@@ -73,6 +73,6 @@ class RecruitmentController extends Controller
         $recruitment_notices->salary=$r->salary;
         $recruitment_notices->job_specialization=$r->job_specialization;
         $recruitment_notices->save();
-        return redirect()->route('employer.Home');
+        return redirect()->route('Employer.EmployerHome');
     }
 }
