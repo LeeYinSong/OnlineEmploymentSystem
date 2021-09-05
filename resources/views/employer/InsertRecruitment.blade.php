@@ -31,7 +31,7 @@
                     <form class="subform" method="post" action="{{ route('addRecruitment.store') }}" enctype="multipart/form-data">
 					{{ csrf_field() }} 
 
-					<input class="form-control" type="hidden" name="employer_id" id="employer_id" value="{{$employer_id = Auth::guard('employer')->user()->id }}">
+					<input class="form-control" type="hidden" name="employer_id" id="employer_id" value="{{Auth::guard('employer')->user()->id}}">
 
                         <div class="form-group row">
                             	<label for="job_type" class="label">Job Type: </label>

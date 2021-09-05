@@ -15,7 +15,6 @@ class CreateRecruitmentNoticesTable extends Migration
     {
         Schema::create('recruitment_notices', function (Blueprint $table) {
             $table->id();
-            $table->integer("user_id");
             $table->integer("employer_id");
             $table->string('career_levelName');
             $table->string('job_description');

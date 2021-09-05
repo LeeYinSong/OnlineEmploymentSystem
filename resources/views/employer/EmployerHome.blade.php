@@ -8,16 +8,16 @@
     <div class="p-5 container-fluid">
         <div style="text-align: right;">
         <strong style="font-family:verdana;  position: relative;">
-        <h1>More talented Students here!</h1>
-        </strong>
-        <p>Find out out more talented students here!</p>
+            <h1>More talented Students here!</h1>
+            </strong>
+            <p>Find out out more talented students here!</p>
             <p>Our job seekers are from different universitie.</p>
             <p>Here all the student wants to learn and get more working experience.</p>
             <p>The students at here are come form different field which is computer science, marketing, or design.</p>
             <p>At here you can find more the principal students!</p>
         </div>
         
-        <button class="btn btn-danger float-right" style="border-radius: 20em;" type="button">See More Resume</button>
+        <button class="btn btn-danger" style="border-radius: 20em;" type="button">See More Resume</button>
     </div>
 
     <div class="p-5 container-fluid" style="background: rgba(192,192,192, 0.4);">

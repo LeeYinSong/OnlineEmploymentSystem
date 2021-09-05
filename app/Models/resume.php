@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class resume extends Model
 {
     use HasFactory;
-    protected $fillable=['name','birthdate','phone_number','email','education_levelName','image','address', 'self_evaluation','work_experiene'];
+    protected $fillable=['user_id','name','birthdate','phone_number','email','education_levelName','image','address', 'self_evaluation','work_experiene'];
     				
     public function educationlevel(){
 

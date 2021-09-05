@@ -22,11 +22,10 @@ class RecruitmentController extends Controller
 
     public function store(){    //step 2 
         $r=request(); //step 3 get data from HTML
-        $employer_id = Auth::guard('employer')->user()->id;
 
         $addCareer=recruitment_notice::create([
             'id'=>$r->ID,
-            'employer_id'=> $employer_id,
+            'employer_id'=>$r->employer_id,
             'career_levelName'=>$r->career_levelName,
             'job_description'=>$r->job_description,
             'requirements'=>$r->requirements,

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class recruitment_notice extends Model
 {
     use HasFactory;
-    protected $fillable=['career_levelName','salary','job_description','requirements','job_type','qualification', 'job_specialization'];
+    protected $fillable=['employer_id','career_levelName','salary','job_description','requirements','job_type','qualification', 'job_specialization'];
 
     public function careerlevel(){
 

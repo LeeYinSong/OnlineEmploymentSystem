@@ -25,6 +25,7 @@ class ResumeController extends Controller
 
         $addEducation=resume::create([    
             'id'=>$r->ID, 
+            'user_id'=>$r->user_id,
             'name'=>$r->name,
             'birthdate'=>$r->birthdate, 
             'phone_number'=>$r->phone_number,
@@ -58,9 +59,12 @@ class ResumeController extends Controller
     public function edit($id){
        
         $resumes =resume::all()->where('id',$id);
-        
-        return view('student/editResume')->with('resumes',$resumes)
+        if(!$resumes->isEmpty()){
+            return view('student/editResume')->with('resumes',$resumes)
                                 ->with('EducationLevels',EducationLevel::all());
+        }else{
+            return view('student.insertResume') ->with('EducationLevels',EducationLevel::all());
+        }
     }
 
     public function update(){
