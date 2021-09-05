@@ -31,20 +31,23 @@
                     <form class="subform" method="post" action="{{ route('editRecruitment.update') }}" enctype="multipart/form-data">
 					{{ csrf_field() }} 
                     @foreach($recruitment_notices as $recruitment_notice)
+						<input class="form-control" type="hidden" name="id" id="id" value="{{$recruitment_notice->id}}">
                         <div class="form-group row">
                             	<label for="job_type" class="label">Job Type: </label>
                             <div class="col-md-6">
-								<input class="form-control" type="text" name="job_type" id="job_type" value="{{$recruitment->job_type}}">
+								<input class="form-control" type="text" name="job_type" id="job_type" value="{{$recruitment_notice->job_type}}">
                             </div>
                         </div>
 
 						<div class="form-group row">
 							<label for="Career" class="label">Select Career Level: </label>
                         <div class="col-md-6">
-							<select style="width:200px;text-align:center" name="career_levelName" id= " career_levelName" class="form-control">
+							<select style="width:200px;text-align:center" name="career_levelName" id= "career_levelName" class="form-control">
 								<option  value="">Select Career Level: </option>
 							@foreach($CareerLevels as $CareerLevel)
-								<option  value="{{ $CareerLevel->Career_Level}}">{{ $CareerLevel->Career_Level}}</option>
+								<option  value="{{ $CareerLevel->Career_Level}}"
+									@if($recruitment_notice->career_levelName==$CareerLevel->Career_Level)selected                    
+                        				@endif>{{ $CareerLevel->Career_Level}}</option>
 							@endforeach
 							</select> 
                         </div>
@@ -53,35 +56,35 @@
 						<div class="form-group row">
                             	<label for="salary" class="label">Salary: </label>
                             <div class="col-md-6">
-								<input class="form-control" type="text" name="salary" id="salary" value="{{$recruitment->salary}}">
+								<input class="form-control" type="text" name="salary" id="salary" value="{{$recruitment_notice->salary}}">
                             </div>
                         </div>
 
 						<div class="form-group row">
 								<label for="qualification" class="label">Qualification: </label>
                             <div class="col-md-6">
-								<input class="form-control" name="qualification" id="qualification" type="text" value="{{$recruitment->qualification}}">
+								<input class="form-control" name="qualification" id="qualification" type="text" value="{{$recruitment_notice->qualification}}">
                             </div>
                         </div>
 
 						<div class="form-group row">
 								<label for="requirements" class="label">Requirements: </label>
                             <div class="col-md-6">
-								<input class="form-control" name="requirements" id="requirements" type="text" value="{{$recruitment->requirements}}">
+								<input class="form-control" name="requirements" id="requirements" type="text" value="{{$recruitment_notice->requirements}}">
                             </div>
                         </div>
 
 						<div class="form-group row">
 								<label for="job_specialization" class="label">Job Specialization: </label>	
                             <div class="col-md-6">
-								<input class="form-control" name="job_specialization" id="job_specialization" type="text" value="{{$recruitment->job_specialization}}">
+								<input class="form-control" name="job_specialization" id="job_specialization" type="text" value="{{$recruitment_notice->job_specialization}}">
                             </div>
                         </div>
 
 						<div class="form-group row">
 								<label for="job_description" class="label">Job Description: </label>	
                             <div class="col-md-6">
-								<input class="form-control" name="job_description" id="job_description" type="text" value="{{$recruitment->job_description}}">
+								<input class="form-control" name="job_description" id="job_description" type="text" value="{{$recruitment_notice->job_description}}">
                             </div>
                         </div>
                         @endforeach

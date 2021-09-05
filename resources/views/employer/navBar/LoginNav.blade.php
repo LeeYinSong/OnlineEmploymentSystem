@@ -75,8 +75,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('Recruitment') }}">
+                                <a class="dropdown-item" href="{{ route('Recruitment') }}">
                                         Insert Recruitment
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('editRecruitment', ['id' => Auth::guard('employer')->user('id')]) }}">
+                                        Edit Recruitment
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -74,6 +74,9 @@
                                     <a class="dropdown-item" href="{{ route('Recruitment') }}">
                                         Insert Recruitment
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('editRecruitment', ['id' => Auth::guard('employer')->user('id')]) }}">
+                                        Edit Recruitment
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
