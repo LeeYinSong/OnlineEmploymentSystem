@@ -18,7 +18,7 @@
         
         </div>
 
-        <button class="btn btn-danger" style="border-radius: 20em;" type="button">Find More Job</button>
+        <a href="{{ route('ViewRecruitment') }}"><button class="btn btn-danger" style="border-radius: 20em;" type="button">Find More Job</button>
     </div>
 
     <div class="p-5 container-fluid" style="background: rgba(192,192,192, 0.4);">
