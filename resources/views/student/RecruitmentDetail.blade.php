@@ -1,4 +1,10 @@
 @extends('layouts.app')
+<style>
+        th, td {
+            height: 40px;
+            vertical-align: top;
+        }
+</style>
 @section('content')  
             <div>   
                 <div style="text-align:center"> 
@@ -11,15 +17,37 @@
             <form action="" method="">
 
                        @csrf
-
-                    <h5 class="card-title"><strong>Job type: </strong>{{$recruitment_notice->job_type}}</h5>
-                    <h5 class="card-title"><strong>Salary: RM </strong>{{$recruitment_notice->salary}}</h5>
-                    <h5 class="card-title"><strong>Career level: </strong>{{$recruitment_notice->career_levelName}}</h5>
-                    <h5 class="card-title"><strong>Requirements: </strong>{{$recruitment_notice->requirements}}</h5>
-                    <h5 class="card-title"><strong>qualification: </strong>{{$recruitment_notice->qualification}}</h5>
-                    <h5 class="card-title"><strong>job_specialization: </strong>{{$recruitment_notice->job_specialization}}</h5>
-                    <h5 class="card-title"><strong>Description: </strong>{{$recruitment_notice->job_description}}</h5>
-
+                    <img src="{{ asset('images/PersonalImg') }}/{{$recruitment_notice->image}}" alt="" style="width:30%; margin-bottom: 3%;" class="img-fluid"> 
+                    <table style="text-align:left; font-size: 20px; vertical-align: bottom;">
+                        <tr>
+                            <td style="width: 35%;"><strong> Job Type: </strong></td>
+                            <td>{{$recruitment_notice->job_type}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Salary: </strong></td>
+                            <td>{{$recruitment_notice->salary}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Career Level: </strong></td>
+                            <td>{{$recruitment_notice->career_levelName}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Requirements: </strong></td>
+                            <td>{{$recruitment_notice->requirements}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Qualification: </strong></td>
+                            <td>{{$recruitment_notice->qualification}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Job Specialization: </strong></td>
+                            <td>{{$recruitment_notice->job_specialization}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong> Job Description: </strong></td>
+                            <td>{{$recruitment_notice->job_description}}</td>
+                        </tr>
+                    </table>
                     <p style="text-align:center">
                             <input type="submit" name="insert" value="Accept Recruitment" class="btn btn-success">
                     </p>

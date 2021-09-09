@@ -22,6 +22,9 @@ class RecruitmentController extends Controller
 
     public function store(){    //step 2 
         $r=request(); //step 3 get data from HTML
+        $image=$r->file('recruitment_notices-image');   //step to upload image get the file input
+        $image->move('images/PersonalImg',$image->getClientOriginalName());   //images is the location                
+        $imageName=$image->getClientOriginalName(); 
 
         $addCareer=recruitment_notice::create([
             'id'=>$r->ID,
@@ -32,6 +35,7 @@ class RecruitmentController extends Controller
             'job_type'=>$r->job_type,
             'qualification'=>$r->qualification,
             'salary'=>$r->salary, //fullname from HTML
+            'image'=>$imageName,
             'job_specialization'=>$r->job_specialization,
         ]);
     
@@ -68,6 +72,12 @@ class RecruitmentController extends Controller
     public function update(){
         $r=request();
         $recruitment_notices=recruitment_notice::find($r->id);
+        if($r->file('recruitment_notices-image')!=''){
+            $image=$r->file('recruitment_notices-image');        
+            $image->move('images',$image->getClientOriginalName());                   
+            $imageName=$image->getClientOriginalName(); 
+            $recruitment_notices->image=$imageName;
+        }
         
         $recruitment_notices->career_levelName=$r->career_levelName;
         $recruitment_notices->job_description=$r->job_description;

@@ -33,7 +33,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('Employer/EmployerHome') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" >
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=145px>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -49,7 +49,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @auth
+                        @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('Employer.login') }}">{{ __('Login') }}</a>
@@ -68,14 +68,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ViewResume') }}">Resume list</a>
                         </li>
-
+                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::guard('employer')->user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('Recruitment') }}">
+                                <a class="dropdown-item" href="{{ route('Recruitment') }}">
                                         Insert Recruitment
                                     </a>
                                     <a class="dropdown-item" href="{{ route('editRecruitment', ['id' => Auth::guard('employer')->user('id')]) }}">
@@ -97,6 +97,8 @@
                 </div>
             </div>
         </nav>
+        <div>
+
 
         <main class="py-4">
             @yield('content')

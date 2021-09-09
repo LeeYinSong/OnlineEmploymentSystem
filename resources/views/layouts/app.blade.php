@@ -105,7 +105,7 @@
 <!------------------------------------------------------------------- Footer(Start) ---------------------------------------------------------------------------------->            
 
         <div class="container-fluid">
-        <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-white shadow-sm" Style="position: fixed; left: 0; bottom: 0; width: 100%;">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" Style="position: fixed; left: 0; bottom: 0; width: 100%;">
             
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=100px>      
                     <p class="m-1 copyright-text">&copy;Southern University College. 2021 </p>

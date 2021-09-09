@@ -45,12 +45,12 @@
                         <a href="{{ route('ResumeDetail', ['id' => $resume->id]) }}" style="text-decoration: none; color: Black;">
                             <div class="card h-150 card bg-snow text-black" Style="outline: 1px black;  width: 330px; height: 410px">
                                 <div class="p-4">
-                                    <img src="{{ asset('images/PersonalImg') }}/{{$resume->image}}" alt="" style="width:30%; margin-left: 27%; margin-bottom: 3%;" class="img-fluid"> 
-                                    <h5 class="p-1">Name: {{$resume->name}}</h5>
-                                    <h5 class="p-1">Birthdate: {{$resume->birthdate}}</h5>
-                                    <h5 class="p-1">Phone number: 0{{$resume->phone_number}}</h5>
-                                    <h5 class="p-1">Email: {{$resume->email}}</h5>
-                                    <h5 class="p-1">Education Level: <br> {{$resume->education_levelName}}</h5>
+                                    <img src="{{ asset('images/PersonalImg') }}/{{$resume->image}}" alt="" style="width:50%; margin-left: 27%; margin-bottom: 3%;" class="img-fluid"> 
+                                    <h5 class="p-1"><strong> Name: </strong>{{$resume->name}}</h5>
+                                    <h5 class="p-1"><strong>Birthdate: </strong>{{$resume->birthdate}}</h5>
+                                    <h5 class="p-1"><strong>Phone number: </strong>0{{$resume->phone_number}}</h5>
+                                    <h5 class="p-1"><strong>Email: </strong>{{$resume->email}}</h5>
+                                    <h5 class="p-1"><strong>Education Level: </strong><br> {{$resume->education_levelName}}</h5>
                                     <!-- <h5 class="card-title">address: {{$resume->address}}</h5>
                                     <h5 class="card-title">self_evaluation: {{$resume->self_evaluation}}</h5>
                                     <h5 class="card-title">work_experiene: {{$resume->work_experiene}}</h5> -->

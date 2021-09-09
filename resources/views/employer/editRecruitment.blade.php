@@ -66,7 +66,12 @@
 								<input class="form-control" name="qualification" id="qualification" type="text" value="{{$recruitment_notice->qualification}}">
                             </div>
                         </div>
-
+						<div class="form-group row">
+							<label for="image" class="label">Company Logo: </label>
+                        <div class="col-md-6">
+							<input class="form-control" name="imageName" id="imageName" type="file" value="{{$recruitment_notice->imageName}}">
+                        </div>
+                    	</div>
 						<div class="form-group row">
 								<label for="requirements" class="label">Requirements: </label>
                             <div class="col-md-6">

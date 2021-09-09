@@ -21,6 +21,7 @@ class CreateRecruitmentNoticesTable extends Migration
             $table->string('requirements');
             $table->string('job_type');
             $table->string('qualification');
+            $table->string('image');
             $table->integer('salary');
             $table->string('job_specialization');
             $table->timestamps();

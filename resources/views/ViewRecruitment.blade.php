@@ -42,18 +42,21 @@
                  <div class="row">
                  @foreach($recruitment_notices as $recruitment_notice)
                         <div class="order-md-4 p-4">
-                            <div class="card h-150 card bg-snow text-black" Style="outline: 1px black;  width: 330px; height: 300px">
+                        <a href="{{ route('RecruitmentDetail', ['id' => $recruitment_notice->id]) }}" style="text-decoration: none; color: Black;">
+                            <div class="card h-150 card bg-snow text-black" Style="outline: 1px black; width: 330px; height: 410px">
                                 <div class="p-4">
-                                <h5 class="p-1">Job type: {{$recruitment_notice->job_type}}</h5>
-                                    <h5 class="p-1">Salary: RM {{$recruitment_notice->salary}}</h5>
-                                    <h5 class="p-1">Career level: {{$recruitment_notice->career_levelName}}</h5> 
-                                    <h5 class="p-1">Requirements: <br> {{$recruitment_notice->requirements}}</h5>
+                                <img src="{{ asset('images/PersonalImg') }}/{{$recruitment_notice->image}}" alt="" style="width:60%; margin-left: 20%; margin-bottom: 3%;" class="img-fluid"> 
+                                <h5 class="p-1"><strong>Job type: </strong>{{$recruitment_notice->job_type}}</h5>
+                                    <h5 class="p-1"><strong>Salary: </strong>RM {{$recruitment_notice->salary}}</h5>
+                                    <h5 class="p-1"><strong>Career level: </strong>{{$recruitment_notice->career_levelName}}</h5> 
+                                    <h5 class="p-1"><strong>Requirements: </strong><br> {{$recruitment_notice->requirements}}</h5>
                                     <!-- <h5 class="p-1">Description: {{$recruitment_notice->job_description}}</h5>
                                     <h5 class="p-1">qualification: {{$recruitment_notice->qualification}}</h5>
                                     <h5 class="p-1">job_specialization: {{$recruitment_notice->job_specialization}}</h5> -->
 
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                 @endforeach       
                     </div>
@@ -66,4 +69,4 @@
 <!---------------------------------------------------------------- Job List (End) ----------------------------------------------------------------->
 
          </body>
-@endsection    
+@endsection   

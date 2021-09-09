@@ -17,7 +17,7 @@
             <p>At here you can find more the principal students!</p>
         </div>
         
-        <a href="{{ route('ViewResume') }}"><button class="btn btn-danger" style="border-radius: 20em;" type="button">See More Resume</button>
+        <a href="{{ route('ViewResume') }}"><button class="btn btn-danger" style="border-radius: 20em;" type="button">See More Resume</button></a>
     </div>
 
     <div class="p-5 container-fluid" style="background: rgba(192,192,192, 0.4);">
