@@ -110,7 +110,7 @@
         </strong>
         <strong><p>What's our purpose?</p></strong>
             <p>The purpose of our website is for the students to find the freelance job or some part time to enrich themself and gain more working experience.</p>
-        <strong><p>Where is the idea form?</p></strong>
+        <strong><p>Where is the idea from?</p></strong>
         The idea of this website is came form the students between 18 to 25 years old student. we gather the idea with using the questionnaire to know the requirement form them.</p>
         <strong><p>Why our website name is called Sunrise Street?</p></strong>
         <p>Here i will tell you, this is because Sunrise is represent to the young generation and Street is represent a platform that let people find the jobs.

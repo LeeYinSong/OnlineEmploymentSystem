@@ -65,13 +65,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Job list</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Resume list</a>
-                        </li>
-                        
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
