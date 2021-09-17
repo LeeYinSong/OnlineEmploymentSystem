@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('employer.navBar.RecruitmentNav')
 <style>
         th, td {
             height: 40px;
@@ -51,7 +51,7 @@
                     </table>
                     
                     <p style="text-align:center; margin-top: 3%;">
-                            <input type="submit" name="insert" value="Accept Resume" class="btn btn-success">
+                            <input type="submit" name="insert" value="Accept Resume" class="btn btn-success" href="{{ url('Employer/EmployerHome') }}">
                     </p>
                 </form>
                 </div>

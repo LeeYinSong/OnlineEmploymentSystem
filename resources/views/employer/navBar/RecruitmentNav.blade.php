@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<style>
+    <style>
         body{
             background: #eee;
             padding-bottom: 75px;
@@ -13,7 +13,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Sunrise Street') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,13 +27,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<!------------------------------------------------------------------ Navigation(Start) ---------------------------------------------------------------------------------->            
+<!----------------------------------------------------------------- Navigation(Start) ---------------------------------------------------------------------------------->            
 
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}" >
+                <a class="navbar-brand" href="{{ url('Employer/EmployerHome') }}" >
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=145px>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -50,47 +50,53 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Employer.login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ url('Employer/EmployerHome') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Employer.register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('ViewResume') }}">Resume list</a>
                         </li>
+                        
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::guard('employer')->user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('Recruitment') }}">
+                                        Insert Recruitment
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('editRecruitment', ['id' => Auth::guard('employer')->user('id')]) }}">
+                                        Edit Recruitment
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div>
 
-<!------------------------------------------------------------------ Navigation(End) ---------------------------------------------------------------------------------->            
 
-<!-------------------------------------------------------------------- Content(Start) ---------------------------------------------------------------------------------->            
-
-    <div class="p-4 ml-0 container" style= "background-image:linear-gradient(to right, rgba(128,128,128, 0.63), rgba(192,192,192, 0.82)); width: 65%; height: 90%; position: absolute">
-
-    <strong style="font-family:verdana;" >
-        <h1>About us</h1>
-        </strong>
-        <strong><p>What's our purpose?</p></strong>
-            <p>The purpose of our website is for the students to find the freelance job or some part time to enrich themself and gain more working experience.</p>
-        <strong><p>Where is the idea from?</p></strong>
-        The idea of this website is came form the students between 18 to 25 years old student. we gather the idea with using the questionnaire to know the requirement form them.</p>
-        <strong><p>Why our website name is called Sunrise Street?</p></strong>
-        <p>Here i will tell you, this is because Sunrise is represent to the young generation and Street is represent a platform that let people find the jobs.
-         Sunrise represent the young generation is because the young generation just like the sun that just came out form the horizon is fresh and ignorant.
-        the street will represent to the platform that let people find jobs is because in our website we have a lot of jobs and all the jobs can combine to become a street. That's why our website is called Sunrise Street.</p>
-        
-    </div>
-</div>
         <main class="py-4">
             @yield('content')
         </main>
 
-<!-------------------------------------------------------------------- Content(End) ---------------------------------------------------------------------------------->            
+<!----------------------------------------------------------------- Navigation(End) ---------------------------------------------------------------------------------->            
 
 <!------------------------------------------------------------------- Footer(Start) ---------------------------------------------------------------------------------->            
 
-<div class="container-fluid">
-        <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-white shadow-sm" Style="height: 7%">       
+        <div class="container-fluid">
+        <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-white shadow-sm" Style="position: fixed; left: 0; bottom: 0; width: 100%;">
+            
                     <img src="{{ asset('images/Logo1.png')}}" alt="" class="img-fluid" width=100px>      
                     <p class="m-1 copyright-text">&copy;Southern University College. 2021 </p>
 
@@ -99,7 +105,9 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarCollapse" overflow= "hidden">
-                        <ul class="navbar-nav mr-auto"></ul>
+                        <ul class="navbar-nav mr-auto">
+
+                        </ul>
 
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -122,7 +130,7 @@
                 </div>
             </nav>
         </div>
-        
+
 <!------------------------------------------------------------------- Footer(End) ---------------------------------------------------------------------------------->            
 
 </body>
