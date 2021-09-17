@@ -14,11 +14,11 @@
 <div class="container-fluid">
         <div class="row">
             <div class="px-2">
-                <img src="{{ asset('images/person.jpg')}}" alt="" class="img-fluid" style="border-radius: 50%; float: left; width:50%;">
+                <img src="{{ asset('images/person.jpg')}}" alt="" class="img-fluid" style="border-radius: 50%; float: left; width:25%;">
 
-                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:{{ Auth::user()->name }}</h5>
-                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:{{ Auth::user()->email }}</h5>
-                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company:{{ Auth::user()->company }}</h5>
+                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: {{ Auth::user()->name }}</h5>
+                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: {{ Auth::user()->email }}</h5>
+                <h5 style="margin-left: 150px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company: {{ Auth::user()->company }}</h5>
             </div>
         </div>
     </div>

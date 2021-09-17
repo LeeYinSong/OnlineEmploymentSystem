@@ -49,7 +49,7 @@
                         </tr>
                     </table>
                     <p style="text-align:center">
-                            <input type="submit" name="insert" value="Accept Recruitment" class="btn btn-success" href="{{ url('user/home') }}">
+                            <input type="submit" name="insert" value="Accept Recruitment" class="btn btn-success">
                     </p>
                 </form>
                 </div>

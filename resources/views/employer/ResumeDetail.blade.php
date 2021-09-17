@@ -51,7 +51,7 @@
                     </table>
                     
                     <p style="text-align:center; margin-top: 3%;">
-                            <input type="submit" name="insert" value="Accept Resume" class="btn btn-success" href="{{ url('Employer/EmployerHome') }}">
+                            <input type="submit" name="insert" value="Accept Resume" class="btn btn-success">
                     </p>
                 </form>
                 </div>
